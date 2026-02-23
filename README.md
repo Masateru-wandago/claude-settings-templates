@@ -12,6 +12,26 @@ Claude Code の `settings.json` に貼り付けて使える、用途別の権限
 | `template-dev-balanced.json` | アプリ開発・雰囲気コーディング向けバランス型 | ★★★☆☆ | ★★★★☆ |
 | `template-loose.json` | ゆるめ（作業効率優先） | ★★☆☆☆ | ★★★★★ |
 
+### コメント付きファイルについて
+
+各テンプレートには、権限設定の意図を日本語で解説した `_comment` 版が用意されています。
+
+| コメント付きファイル | 対応するテンプレート |
+|---|---|
+| `template-readonly_comment.json` | `template-readonly.json` |
+| `template-strict_comment.json` | `template-strict.json` |
+| `template-infra-balanced_comment.json` | `template-infra-balanced.json` |
+| `template-dev-balanced_comment.json` | `template-dev-balanced.json` |
+| `template-loose_comment.json` | `template-loose.json` |
+
+`_comment` 版には以下のフィールドが追加されており、各パーミッションの目的・理由を確認できます。
+
+- `_description_comment` — テンプレート全体の目的・用途
+- `_allow_comments` — 許可している各パーミッションの理由・注意点
+- `_deny_comments` — ブロックしている各パーミッションの理由
+
+> **注意:** `_comment` 版は解説用です。実際の設定ファイルに適用する際は、コメントフィールドを除いた通常版（`_comment` なし）を使用してください。
+
 ---
 
 ## 各テンプレートの詳細
