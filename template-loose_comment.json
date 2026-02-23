@@ -1,0 +1,51 @@
+{
+  "_description": "ゆるめ - 作業効率優先（慣れてきたら）",
+  "_description_comment": "Bashコマンドをほぼ全て許可する作業効率重視のテンプレート。Claudeの使い方に慣れてきたユーザー向け。個人フォルダへの書き込みと主要パッケージマネージャのインストールのみブロック。",
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(~/projects/*)",
+      "Write(~/work/*)",
+      "Edit(~/projects/*)",
+      "Edit(~/work/*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "TodoWrite",
+      "TodoRead"
+    ],
+    "_allow_comments": {
+      "Bash(*)": "すべてのBashコマンドを許可（Denyで指定したコマンドを除く）。最大限の作業自由度を確保",
+      "Read(*)": "すべてのファイルの読み取りを許可（機密ファイルも読める点に注意）",
+      "Write(~/projects/*) / Write(~/work/*)": "projects・workフォルダ配下へのファイル書き込みを許可",
+      "Edit(~/projects/*) / Edit(~/work/*)": "projects・workフォルダ配下のファイル編集を許可",
+      "WebFetch(*) / WebSearch(*)": "Webページ取得やインターネット検索を許可",
+      "TodoWrite / TodoRead": "Claudeのタスク管理（ToDoリスト）機能を許可"
+    },
+    "deny": [
+      "Write(~/*)",
+      "Write(~/Documents/*)",
+      "Write(~/Desktop/*)",
+      "Write(~/Downloads/*)",
+      "Write(~/Pictures/*)",
+      "Write(C:\\Users\\*)",
+      "Edit(~/*)",
+      "Edit(~/Documents/*)",
+      "Bash(brew install *)",
+      "Bash(pip install *)",
+      "Bash(npm install -g *)",
+      "Bash(apt install *)",
+      "Bash(winget install *)"
+    ],
+    "_deny_comments": {
+      "Write(~/*) / Write(~/Documents/*) など個人フォルダ": "ホームディレクトリ直下・Documents・Desktop・Downloads・Picturesへの書き込みをブロック（個人ファイルの誤上書きを防止）",
+      "Write(C:\\Users\\*)": "Windowsのユーザーフォルダへの書き込みをブロック",
+      "Edit(~/*) / Edit(~/Documents/*)": "ホームディレクトリ直下・Documentsへの編集をブロック",
+      "Bash(brew install *)": "Homebrewによる勝手なパッケージインストールをブロック",
+      "Bash(pip install *)": "pipによる任意パッケージインストールをブロック",
+      "Bash(npm install -g *)": "npmのグローバルインストールをブロック",
+      "Bash(apt install *)": "Linuxのaptパッケージマネージャによるインストールをブロック",
+      "Bash(winget install *)": "Windowsのwingetパッケージマネージャによるインストールをブロック"
+    }
+  }
+}
