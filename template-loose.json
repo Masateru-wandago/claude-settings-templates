@@ -1,0 +1,32 @@
+{
+  "_description": "ゆるめ - 作業効率優先（慣れてきたら）",
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(~/projects/*)",
+      "Write(~/work/*)",
+      "Edit(~/projects/*)",
+      "Edit(~/work/*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "TodoWrite",
+      "TodoRead"
+    ],
+    "deny": [
+      "Write(~/*)",
+      "Write(~/Documents/*)",
+      "Write(~/Desktop/*)",
+      "Write(~/Downloads/*)",
+      "Write(~/Pictures/*)",
+      "Write(C:\\Users\\*)",
+      "Edit(~/*)",
+      "Edit(~/Documents/*)",
+      "Bash(brew install *)",
+      "Bash(pip install *)",
+      "Bash(npm install -g *)",
+      "Bash(apt install *)",
+      "Bash(winget install *)"
+    ]
+  }
+}
