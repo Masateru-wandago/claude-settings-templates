@@ -115,4 +115,4 @@ cp template-dev-balanced.json ~/.claude/settings.json
 
 - ホームディレクトリ直下・Documents・Desktop・Downloads・Pictures 等の個人フォルダへの書き込み
 - Windows の `C:\Users\*` 配下への書き込み
-- `brew`, `pip`, `npm install -g`, `apt`, `winget`, `choco`, `scoop` によるグローバルパッケージのインストール
+- `brew`, `pip`, `npm install -g`, `apt`, `winget` によるグローバルパッケージのインストール
