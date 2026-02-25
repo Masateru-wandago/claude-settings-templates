@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+        "Bash(git *)",
+        
+        "Read(*)",
+        "Bash(echo *)",
+        "Bash(curl *)",
+
+        "Bash(ping *)",
+
+        "Bash(docker *)",
+        "Bash(docker-compose *)",
+        
+        "WebFetch(*)",
+        "WebSearch(*)",
+        "TodoWrite",
+        "TodoRead"
+    ],
+    "deny": [
+        "Bash(brew install/uninstall/upgrade)",
+        "Write / Edit (C:\\Users\\*)",
+        "Bash(brew install *)",
+        "Bash(brew uninstall *)",
+        "Bash(winget / choco / scoop install)",
+        "Bash(rm -rf /*)",
+        "Bash(rm -rf ~*)"
+    ]
+
+  }
+}
