@@ -12,6 +12,14 @@ Claude Code の `settings.json` に貼り付けて使える、用途別の権限
 | `template-dev-balanced.json` | アプリ開発・雰囲気コーディング向けバランス型 | ★★★☆☆ | ★★★★☆ |
 | `template-loose.json` | ゆるめ（作業効率優先） | ★★☆☆☆ | ★★★★★ |
 
+### `_comment` 付きファイルについて
+
+各テンプレートには `_comment` サフィックスを付けたファイルがあります（例: `template-dev-balanced_comment.json`）。
+
+`_allow_comments` / `_deny_comments` フィールドに、各権限エントリの意図・理由を記載しています。設定の差分を確認したい時・カスタマイズの参考にしたい時に使ってください。
+
+> **注意:** `_allow_comments` / `_deny_comments` は Claude Code が無視する追加フィールドです。`settings.json` に貼り付けてもそのまま動作します。
+
 ---
 
 ## 各テンプレートの詳細

@@ -1,0 +1,59 @@
+{
+  "_description": "ゆるめ - 作業効率優先（慣れてきたら）",
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(~/projects/*)",
+      "Write(~/work/*)",
+      "Edit(~/projects/*)",
+      "Edit(~/work/*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "TodoWrite",
+      "TodoRead"
+    ],
+    "_allow_comments": {
+      "Bash(*)": "全シェルコマンドOK。Denyでグローバルインストール系等の危険な操作はブロック済み。ワイルドカードなのでDenyより先に評価される点に注意",
+      "Read(*)": "どこでもファイル読み取りOK（秘密ファイルも読めるので注意）",
+      "Write(~/projects/*)": "~/projects/ 配下への書き込みOK",
+      "Write(~/work/*)": "~/work/ 配下への書き込みOK",
+      "Edit(~/projects/*)": "~/projects/ 配下への編集OK",
+      "Edit(~/work/*)": "~/work/ 配下への編集OK",
+      "WebFetch(*)": "URLアクセスOK（ドキュメント参照・API確認等）",
+      "WebSearch(*)": "ネット検索OK",
+      "TodoWrite": "Claudeのタスクメモ機能OK",
+      "TodoRead": "Claudeのタスクメモ参照OK"
+    },
+    "deny": [
+      "Write(~/*)",
+      "Write(~/Documents/*)",
+      "Write(~/Desktop/*)",
+      "Write(~/Downloads/*)",
+      "Write(~/Pictures/*)",
+      "Write(C:\\Users\\*)",
+      "Edit(~/*)",
+      "Edit(~/Documents/*)",
+      "Bash(brew install *)",
+      "Bash(pip install *)",
+      "Bash(npm install -g *)",
+      "Bash(apt install *)",
+      "Bash(winget install *)"
+    ],
+    "_deny_comments": {
+      "Write(~/*)": "ホームディレクトリ直下への書き込みをブロック（~/projects/*, ~/work/* はAllowで許可済み）",
+      "Write(~/Documents/*)": "Documentsフォルダへの書き込みをブロック",
+      "Write(~/Desktop/*)": "Desktopフォルダへの書き込みをブロック",
+      "Write(~/Downloads/*)": "Downloadsフォルダへの書き込みをブロック",
+      "Write(~/Pictures/*)": "Picturesフォルダへの書き込みをブロック",
+      "Write(C:\\Users\\*)": "Windowsユーザーフォルダへの書き込みをブロック",
+      "Edit(~/*)": "ホームディレクトリ直下への編集をブロック",
+      "Edit(~/Documents/*)": "Documentsフォルダへの編集をブロック",
+      "Bash(brew install *)": "Homebrewでの勝手なパッケージインストールをブロック",
+      "Bash(pip install *)": "pipパッケージのインストールをブロック",
+      "Bash(npm install -g *)": "npmのグローバルインストールをブロック",
+      "Bash(apt install *)": "aptによるパッケージインストールをブロック",
+      "Bash(winget install *)": "Windowsパッケージマネージャーでのインストールをブロック"
+    }
+  }
+}
